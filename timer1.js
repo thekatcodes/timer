@@ -20,7 +20,14 @@ const alarm = function (times) {
 
 	// sort filtered times in ascending order
 	let sortedTimes = filteredTimes.sort((a, b) => a - b);
-	console.log(sortedTimes);
+    console.log(sortedTimes);
+
+    // store convert passed time numbers as miliseconds (times * 1000) and store in variable for delay time in setTimeout
+	let msTimes = [];
+	for (let time of filteredTimes) {
+		msTimes.push(time * 1000);
+	}
+	// console.log(msTimes);
 
 };
 alarm(times);
