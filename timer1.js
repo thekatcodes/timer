@@ -29,5 +29,14 @@ const alarm = function (times) {
 	}
 	// console.log(msTimes);
 
+	for (let time of msTimes) {
+		let timeDelay = 0;
+		timeDelay += time;
+
+		setTimeout(function () {
+			process.stdout.write("\x07");
+		}, timeDelay);
+		// console.log(timeDelay);
+	}
 };
 alarm(times);
