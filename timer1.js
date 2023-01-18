@@ -12,10 +12,15 @@ for (let time = 0; time < process.argv.length - 2; time++) {
 
 const alarm = function (times) {
 	// console.log(times) -> logs array of all node arguments
-    
+
 	let filteredTimes = times.filter(function (time) {
 		return time >= 0;
 	});
 	// console.log(filteredTimes) -> log only numbers that are positive (will skip filter out anything that isn't including empty, neg number, not a number)
+
+	// sort filtered times in ascending order
+	let sortedTimes = filteredTimes.sort((a, b) => a - b);
+	console.log(sortedTimes);
+
 };
 alarm(times);
